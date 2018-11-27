@@ -1,3 +1,5 @@
+require 'pry'
+
 class Owner
   @@all = []
   
@@ -20,7 +22,7 @@ class Owner
   
   def self.reset_all 
     self.all.clear
-  end 
+  end
   
   def say_species
     "I am a #{species}."
@@ -51,10 +53,13 @@ class Owner
   end 
   
   def sell_pets
-    @pets.each do |species, animals| 
-      animals.each { |animal| animal.mood = "nervous"}
+    @pets.each do |species, animals|
+      animals.each do |animal| 
+        animal.mood = "nervous"
+      end
       animals.clear
     end
+    binding.pry
   end 
   
   def list_pets
