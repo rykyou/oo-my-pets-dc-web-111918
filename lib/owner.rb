@@ -1,3 +1,5 @@
+require 'pry'
+
 class Owner
   @@all = []
   
@@ -15,19 +17,19 @@ class Owner
   end 
   
   def self.count
-    self.all.count
+    all.count
   end 
   
   def self.reset_all 
-    self.all.clear
-  end 
+    all.clear
+  end
   
   def say_species
     "I am a #{species}."
   end 
   
   def buy_fish(fish_name)
-    @pets[:fishes] << Fish.new(fish_name)
+    pets[:fishes] << Fish.new(fish_name)
   end 
   
   def buy_cat(cat_name)
@@ -51,8 +53,10 @@ class Owner
   end 
   
   def sell_pets
-    @pets.each do |species, animals| 
-      animals.each { |animal| animal.mood = "nervous"}
+    @pets.each do |species, animals|
+      animals.each do |animal| 
+        animal.mood = "nervous"
+      end
       animals.clear
     end
   end 
