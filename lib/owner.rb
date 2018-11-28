@@ -6,7 +6,7 @@ class Owner
 
   def initialize(species)
     @species = species
-    @pets = {:fishes => [], :dogs => [], :cats => []}
+    @pets = {fishes: [], dogs: [], cats: []} #same as {:fishes => [], :dogs => [], :cats => []}
     @@all << self
   end
 
@@ -23,7 +23,7 @@ class Owner
   end
 
   def say_species
-    "I am a #{self.species}."
+    "I am a #{species}." #species here is looking at another already defined instance method (of Owner). Implicit "self" here.
   end
 
   def buy_fish(fish_name)

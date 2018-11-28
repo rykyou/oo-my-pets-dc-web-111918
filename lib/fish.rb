@@ -1,4 +1,6 @@
-class Fish
+require_relative "./pet.rb"
+
+class Fish < Pet
   attr_accessor :mood
   attr_reader :name 
   
@@ -7,3 +9,4 @@ class Fish
     @mood = "nervous"
   end 
 end
+

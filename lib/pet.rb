@@ -1,6 +1,4 @@
-require_relative "./pet.rb"
-
-class Dog < Pet
+class Pet 
   attr_accessor :mood
   attr_reader :name 
   
@@ -8,5 +6,4 @@ class Dog < Pet
     @name = name 
     @mood = "nervous"
   end 
-end
-
+end 

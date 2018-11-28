@@ -1,4 +1,6 @@
-class Cat
+require_relative "./pet.rb"
+
+class Cat < Pet
   attr_accessor :mood
   attr_reader :name
   
